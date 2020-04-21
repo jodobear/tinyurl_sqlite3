@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>TinyUrl</title>
+   </head>
+   <body>
+      <br />
+      {% if not short_url %}
+         <h4>Enter URL to get a tiny one:</h4>
+         <form method="post" class="navbar-form navbar-right" action="">
+            <div class="form-group">
+               <input type="text" id="url" name="url-submit" class="url-submit" placeholder="URL" />
+               <button type="submit" class="url-submit-button">Submit</button>
+            </div>
+         </form>
+      {% else %}
+      <div>
+         Here's your tiny URL: <a href="{{short_url}}"> {{short_url}}</a>
+      </div>
+      {% endif %}
+   </body>
+</html>
